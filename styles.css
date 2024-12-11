@@ -1,0 +1,151 @@
+:root {
+    --white: #FFFFFFff;
+    --slate-gray: #6B7D93ff;
+    --paynes-gray: #49556Bff;
+    --paynes-gray-2: #4F5767ff;
+    --french-gray: #AFB2B8ff;
+    --alice-blue: #EDF2F8ff;
+}
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--alice-blue);
+    font-family: "Manrope", sans-serif;
+}
+.container{
+    max-width: 960px;
+    margin: 160px auto;
+}
+.wrapper{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: var(--white);
+  border-radius: 20px;
+}
+.img img{
+    width: 100%;
+    border-radius: 20px 0 0 20px  ;
+    display: block;
+}
+.component{
+   padding: 15px 30px 0 35px;
+}
+.component h1{
+    color: var(--paynes-gray);
+}
+.component p{
+    color: var(--slate-gray);
+}
+.author {
+    display: flex;
+   margin-top: 20px;
+}
+.author p{
+    margin-left: 20px;
+    font-family:  "Manrope", sans-serif;
+    font-weight: 600;
+}
+.author .light{
+    margin-top: 15px;
+    font-family:  "Manrope", sans-serif;
+    font-weight: 300;
+}
+.author img{
+    width: 45px; 
+    height: 45px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.circle{
+    margin-left: auto;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--alice-blue);
+    position: relative;
+    margin-top: 10px;
+}
+.circle .icon{
+    font-size: 2em;
+    position: absolute;
+    color: var(--paynes-gray);
+    top: 6%;
+    left: 18%;
+    
+}
+.tip { 
+    display: none; 
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    bottom: calc(100% + 10px); 
+    background-color: var(--paynes-gray); 
+    color: var(--white);
+    padding: 20px; 
+    box-shadow: 0 2px 10px rgba(31, 29, 43, 0.5); 
+    border-radius: 5px; 
+    z-index: 1000; 
+    white-space: nowrap;
+}
+.tip::before { 
+    content: ''; 
+    position: absolute; 
+    top: 100%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    border-width: 10px; 
+    border-style: solid; 
+    border-color: var(--paynes-gray) transparent transparent transparent; }
+.tip ion-icon{
+    font-size: 2em;
+    padding: 0 5px;
+}
+.tip span{
+    margin-top: -20px;
+    padding: 0;
+    line-height: 1em;
+    letter-spacing: 0.5em;
+    display: inline-block;
+    vertical-align: middle;
+}
+.tip.active { display: block; }
+@media screen  and (max-width: 460px){
+    .container{
+        max-width: 360px;
+        margin: 40px auto;
+    }
+    .img img{
+        border-radius: 20px 20px 0 0 ;
+    }
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .component{
+        padding: 15px 20px;
+    }
+      .component h1{
+        font-size: 1.5em;
+    }
+    .tip {  
+        position: absolute; 
+        left: 21%; 
+        transform: translateX(-85%); 
+        bottom: calc(-100% + 15px); 
+        padding: 20px 60px 20px 65px ; 
+        border-radius: 0 0 20px 20px; 
+    }
+    .tip::before { 
+      display: none; }
+}
+.attribution {
+    margin-top: 20px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
